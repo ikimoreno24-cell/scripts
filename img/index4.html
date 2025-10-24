@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial scle=1.0">
+            <meta name="description" content="javascript probatzen">
+            <meta name="author" content="Iker Moreno Morillo">
+        </title>
+        
+    </head>
+    <body>
+        <dialog id="dialog"open> Web orrira sartu nahi duzu?
+        <button id="botoia"onclick='itxi()'>Bai</button>
+        <button id="botoia2" onclick='itxi()'>Ez</button></dialog>
+        
+        <label for="disk_c">Mas palomas sarrerak</label>
+        <meter id="meter" value="0" min="0" max="100">2 out of 10</meter><br>
+        <script>
+            function itxi(){
+                document.getElementById("dialog").close();
+            }
+            function bete() {
+                    for (let i = 0; i <= 100; i++) {
+                    setTimeout(() => {
+                        document.getElementById("meter").value = i;
+                    }, i * 25);
+                }
+            }
+        </script>
+        <script>
+            const c1 = document.getElementById("botoia");
+            const c2 = document.getElementById("botoia2");
+            c2.addEventListener("click", function () {
+                c1.close()
+            });
+
+            bete();
+        </script>
+    </body>
+</html>
